@@ -1,8 +1,25 @@
 aid: 1stdibs
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/1stdibs.png
 name: 1stdibs
-description: '1stdibs is a company surfaced as a portfolio company of index-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: retail. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  1stDibs is an online marketplace for luxury antiques, vintage and modern furniture,
+  fine art, jewelry, watches, and fashion. It connects a global network of vetted
+  sellers and design dealers with buyers seeking curated, authenticated high-end
+  goods, backed by purchase-protection and authenticity guarantees. 1stDibs does
+  not operate a public REST/OpenAPI developer program; its documented machine-facing
+  surface is an official Model Context Protocol (MCP) server, registered as
+  com.1stdibs/1stDibs, that lets agents browse and search the marketplace.
 url: https://raw.githubusercontent.com/api-evangelist/1stdibs/refs/heads/main/apis.yml
 x-type: company
 x-source: index-ventures-portfolio
@@ -14,7 +31,24 @@ modified: '2026-07-17'
 tags:
 - Company
 - Retail
-apis: []
+- Marketplace
+- Luxury Goods
+- E-Commerce
+- Furniture
+- Art
+- Jewelry
+- MCP
+apis:
+- name: 1stDibs MCP Server
+  description: >-
+    Official remote Model Context Protocol server (com.1stdibs/1stDibs) for browsing
+    and searching luxury design items on the 1stDibs marketplace. Streamable-HTTP
+    transport, API-key authentication.
+  humanURL: https://www.pulsemcp.com/servers/1stdibs
+  baseURL: https://www.1stdibs.com/soa/mcp/
+  properties:
+  - type: MCPServer
+    url: mcp/1stdibs-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -22,4 +56,23 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://1stdibs.com
+  url: https://www.1stdibs.com
+- type: MCPServer
+  url: mcp/1stdibs-mcp.yml
+- type: LLMsTxt
+  url: llms/1stdibs-llms.txt
+- type: DomainSecurity
+  url: security/1stdibs-domain-security.yml
+- type: GitHubOrganization
+  url: https://github.com/1stdibs
+- type: Support
+  url: https://support.1stdibs.com/hc/en-us/
+- type: TermsOfService
+  url: https://www.1stdibs.com/about/user-agreement/
+- type: PrivacyPolicy
+  url: https://www.1stdibs.com/about/privacy-policy/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
