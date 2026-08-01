@@ -1,0 +1,27 @@
+generated: '2026-07-17'
+method: searched
+source: https://registry.modelcontextprotocol.io/v0/servers?search=1stdibs
+status: published
+registry:
+  name: com.1stdibs/1stDibs
+  official: true
+  registry_status: active
+  published_at: '2025-09-16T23:01:22.451132Z'
+  schema: https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json
+  listing: https://www.pulsemcp.com/servers/1stdibs
+server:
+  name: 1stDibs
+  version: 1.0.0
+  transport: streamable-http
+  url: https://www.1stdibs.com/soa/mcp/
+  authentication: api-key
+  description: MCP server for browsing and searching items on 1stDibs marketplace.
+# Tool schema is not enumerated in the registry server.json; the server exposes
+# browse/search over the 1stDibs luxury-design marketplace. Not fabricating tool
+# definitions we did not fetch.
+tools: []
+notes: >-
+  Official remote MCP server maintained by 1stDibs (com.1stdibs/1stDibs in the
+  Model Context Protocol registry). Requires an API key. 1stDibs publishes no
+  public REST/OpenAPI developer program; the MCP server is its documented
+  agent-facing surface.
