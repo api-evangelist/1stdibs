@@ -1,5 +1,5 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/1stdibs/integrations
 - https://n8n.io/integrations/1stdibs/
@@ -9,8 +9,40 @@ checked:
 - https://composio.dev/toolkits/1stdibs
 - https://monid.ai/tools/1stdibs
 - https://n8n.io/integrations/1stdibs/
+- https://registry.modelcontextprotocol.io/v0/servers
 - https://zapier.com/apps/1stdibs/integrations
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: MCP Registry
+  partner: mcp
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://registry.modelcontextprotocol.io/v0/servers?search=com.1stdibs
+  contract_reference:
+    register: registry.modelcontextprotocol.io
+    spec_file: null
+    role: mcp-server-listing
+    registered_name: com.1stdibs/1stDibs
+    register_id: com.1stdibs/1stDibs
+    detected_by: sweep-agent-tools.py
+    detected: '2026-10-14'
+  mcp_registry:
+    servers:
+    - com.1stdibs/1stDibs
+    hosted_remote: 1
+    local_package: 0
+    transports:
+      streamable-http: 1
+    auth_declared: 0
+    catalog_declared: true
+    namespace_domains:
+    - 1stdibs.com
+  matched_by:
+  - namespace-domain
+  detected_by: sweep-agent-tools.py
+  first_seen: '2026-10-14'
 templates: []
