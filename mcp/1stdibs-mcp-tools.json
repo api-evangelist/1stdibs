@@ -1,0 +1,119 @@
+{
+  "endpoint": "https://www.1stdibs.com/soa/mcp/",
+  "captured": "2026-10-20",
+  "method": "initialize + tools/list (anonymous, no tool called; roadmap#992)",
+  "protocol_version": "2025-06-18",
+  "server_info": {
+    "name": "dibs-mcp",
+    "version": "581.0.0",
+    "title": "1stdibs MCP Server (581.0.0; production)"
+  },
+  "result": {
+    "tools": [
+      {
+        "name": "read_taxonomy",
+        "title": "Read 1stDibs Taxonomy",
+        "description": "Discover how items on 1stDibs are categorized. We have a taxonomy with \n        furniture, art, jewelry, and fashion categories at the top level. \n        This will return a list of next level categories as well as facets with their appropriate filters. \n        You need to specify a category.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "category": {
+              "description": "Category to read taxonomy for",
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "category"
+          ]
+        },
+        "execution": {
+          "taskSupport": "forbidden"
+        }
+      },
+      {
+        "name": "browse_items",
+        "title": "Browse 1stDibs Items",
+        "description": "Browse 1stDibs with the given category and optional page number and filters. \n        Filters are in the format of a query string like category=furniture&location=usa-north-america. \n        Read the taxonomy to discover facets and filters.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "category": {
+              "description": "Category to browse",
+              "type": "string",
+              "minLength": 1
+            },
+            "page": {
+              "description": "Page number to browse",
+              "type": "number"
+            },
+            "filters": {
+              "description": "Filters to apply to the browse",
+              "type": "string"
+            }
+          },
+          "required": [
+            "category"
+          ]
+        },
+        "execution": {
+          "taskSupport": "forbidden"
+        }
+      },
+      {
+        "name": "search_items",
+        "title": "Search 1stDibs Items",
+        "description": "Search 1stDibs with the given query and optional page number and filters. \n        Filters are in the format of a query string like category=furniture&location=usa-north-america. \n        Read the taxonomy to discover categories, facets and filters.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "query": {
+              "description": "Search Query",
+              "type": "string",
+              "minLength": 1
+            },
+            "page": {
+              "description": "Jump to a specific page number",
+              "type": "number"
+            },
+            "filters": {
+              "description": "Filters to apply to the search",
+              "type": "string"
+            }
+          },
+          "required": [
+            "query"
+          ]
+        },
+        "execution": {
+          "taskSupport": "forbidden"
+        }
+      },
+      {
+        "name": "item_details",
+        "title": "Get 1stDibs Item Details",
+        "description": "Get details on a specific item on 1stDibs. You'll need to input the item ID. \n        You can search for an item or browse for an item to find an item ID.",
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "itemId": {
+              "description": "Item ID to get details for",
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "itemId"
+          ]
+        },
+        "execution": {
+          "taskSupport": "forbidden"
+        }
+      }
+    ]
+  }
+}
