@@ -5,8 +5,8 @@
   "protocol_version": "2025-06-18",
   "server_info": {
     "name": "dibs-mcp",
-    "version": "581.0.0",
-    "title": "1stdibs MCP Server (581.0.0; production)"
+    "version": "582.0.0",
+    "title": "1stdibs MCP Server (582.0.0; production)"
   },
   "result": {
     "tools": [
