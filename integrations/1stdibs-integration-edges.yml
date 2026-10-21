@@ -11,6 +11,12 @@ checked:
 - https://n8n.io/integrations/1stdibs/
 - https://registry.modelcontextprotocol.io/v0/servers
 - https://zapier.com/apps/1stdibs/integrations
+- https://a16z.com/portfolio/
+- https://www.battery.com/company/
+- https://www.battery.com/wp-admin/admin-ajax.php
+- https://www.indexventures.com/companies/
+- https://www.sequoiacap.com/our-companies/
+- https://www.sequoiacap.com/sitemap.xml
 summary: null
 marketplace_apps: []
 edges:
@@ -29,7 +35,7 @@ edges:
     registered_name: com.1stdibs/1stDibs
     register_id: com.1stdibs/1stDibs
     detected_by: sweep-agent-tools.py
-    detected: '2026-10-15'
+    detected: '2026-10-19'
   mcp_registry:
     servers:
     - com.1stdibs/1stDibs
@@ -45,4 +51,31 @@ edges:
   - namespace-domain
   detected_by: sweep-agent-tools.py
   first_seen: '2026-10-14'
+- partner_name: Index Ventures
+  partner: index-ventures
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.indexventures.com/companies/1stdibs/
+  category: vc portfolio participation
+  contract_reference:
+    register: Index Ventures companies (indexventures.com/companies/)
+    standard: null
+    spec_file: null
+    role: vc-portfolio-company
+    registered_name: 1stdibs
+    register_id: https://www.indexventures.com/companies/1stdibs/
+    register_country: north-america
+    register_website: http://1stdibs.com
+    matched_domain: 1stdibs.com
+    matched_by: domain
+    signal_note: 'participation only: the venture firm''s own published portfolio lists the company (investment);
+      an ownership and participation record, not conformance or certification'
+    detected_by: sweep-vc-portfolios.py
+    detected: '2026-10-21'
+    sector: retail
+  detected_by: sweep-vc-portfolios.py
+  first_seen: '2026-10-21'
 templates: []
